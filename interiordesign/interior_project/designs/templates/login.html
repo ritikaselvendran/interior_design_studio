@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://amazingarchitecture.com/storage/files/1/Architecture%20firms/Kireeva%20Anna/Black%20house%20in%20the%20woods/Black-house-in-the-woods-Kireeva-Anna-USA-001.jpg') center/cover no-repeat;
+        }
+
+        .container {
+            display: flex;
+            width: 60%;
+            height: 60%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .left-section {
+            flex: 1;
+            position: relative;
+            background-image: url('https://graphicsfamily.com/wp-content/uploads/2020/05/P-Letter-Logo-2-1.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px 0 0 10px;
+            overflow: hidden;
+        }
+
+        .studio-name {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #B78628;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Times New Roman;
+        }
+
+        .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(128, 128, 128, 0.5);
+            border-radius: 0 10px 10px 0;
+        }
+
+        .login-form {
+            width: 70%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-form label,
+        .login-form input[type="text"],
+        .login-form input[type="password"],
+        .login-form input[type="submit"] {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .login-form input[type="submit"] {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-section">
+        <div class="studio-name">PARK INTERIOR</div>
+    </div>
+    <div class="right-section">
+        <form class="login-form" action="home.html" method="post">
+            {% csrf_token %}
+            <h2>Login</h2>
+            <label for="username">USERNAME</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <a href="home.html">
+                <input type="submit" value="Login">
+            </a>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

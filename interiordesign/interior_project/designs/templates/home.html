@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Interior Design Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', serif;
+            overflow-x: hidden;
+            background-color: white; /* Background color */
+        }
+
+        header {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-family: 'Bradley Hand', cursive;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+            font-family: 'Times New Roman', serif; /* Change font for sections */
+        }
+
+        .black-box {
+            background-color: black;
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .room-link {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .room-link img {
+            max-width: 80%; /* Set a larger maximum width for a bigger image */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Center the images */
+            animation: slideFromLeft 1.5s ease;
+        }
+
+        @keyframes slideFromLeft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .room-link a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><i> PARK DESIGNER STUDIO </i></h1>
+    <p>Transforming Spaces, Creating Beauty</p>
+</header>
+
+<section>
+    <h2>Welcome to Our World of Design</h2>
+    <p>Discover the latest trends, get inspired, and turn your dreams into reality.</p>
+    <a href="#contact" class="cta-button">Get in Touch</a>
+</section>
+
+<!-- Kitchen Section -->
+<section class="black-box">
+    <div class="room-link">
+        <a href="kitchen.html">Kitchen</a>
+        <img src="https://www.home-designing.com/wp-content/uploads/2018/12/luxury-white-kitchen.jpg" alt="Kitchen">
+    </div>
+</section>
+
+<!-- Balcony Section -->
+<section class="black-box">
+    <div class="room-link">
+        <a href="balcony.html">Balcony</a>
+        <img src="https://media.designcafe.com/wp-content/uploads/2020/12/11193843/balcony-wall-designs-for-your-home.jpg" alt="Balcony">
+    </div>
+</section>
+
+<!-- Hall Section -->
+<section class="black-box">
+    <div class="room-link">
+        <a href="living.html">Hall</a>
+        <img src="https://loveincorporated.blob.core.windows.net/contentimages/gallery/64b56a3c-7d4f-48e9-b581-ee6e2ccfd2e0-billionaire-bling-pool.jpg" alt="Hall">
+    </div>
+</section>
+
+<!-- Dining Section -->
+<section class="black-box">
+    <div class="room-link">
+        <a href="dining.html">Dining</a>
+        <img src="https://blog.canadianloghomes.com/wp-content/uploads/2022/07/modern-farmhouse-dining-room-ideas.jpg" alt="Dining">
+    </div>
+</section>
+
+<!-- Bathroom Section -->
+<section class="black-box">
+    <div class="room-link">
+        <a href="bathroom.html">Bathroom</a>
+        <img src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2022/3/17/1/HUHH2022_Homes-With-a-History_Naperville-02.jpg.rend.hgtvcom.616.411.suffix/1647529611744.jpeg" alt="Bathroom">
+    </div>
+</section>
+
+<!-- Bedroom Section -->
+<section class="black-box">
+    <div class="room-link">
+        <a href="bedroom.html">Bedroom</a>
+        <img src="https://www.decorpot.com/images/blogimage1361284108interior-designs-for-master-bedroom.jpg" alt="Bedroom">
+    </div>
+</section>
+
+<!-- Dressing Room Section -->
+<section class="black-box">
+    <div class="room-link">
+        <a href="dressing.html">Dressing Room</a>
+        <img src="https://algedra.com.tr/assets/imgs/service/qxfaJmOU0msGqMJ-cyx1Je1t.jpg" alt="Dressing Room">
+    </div>
+</section>
+
+<!-- Office Room Section -->
+<section class="black-box">
+    <div class="room-link">
+        <a href="office.html">Office Room</a>
+        <img src="https://st.hzcdn.com/simgs/pictures/home-offices/golf-course-transitional-tweak-your-space-img~0301b35a05560250_14-9048-1-a1387e5.jpg" alt="Office Room">
+    </div>
+</section>
+
+<!-- Pooja Room Section -->
+<section class="black-box">
+    <div class="room-link">
+        <a href="pooja.html">Pooja Room</a>
+        <img src="https://media.designcafe.com/wp-content/uploads/2020/09/11173551/pooja-room-decoration-with-jaali-panels-and-onyx-stone.jpg" alt="Pooja Room">
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out to us with any questions or inquiries.</p>
+    <p>    Phn-no :0422-1234567.  </p>
+    <p>    If you want to upload your designs here</p>
+    <a href="{% url 'design_create'%}" class="cta-button">create here</a>
+    <!-- Add your contact form or other content here -->
+</section>
+
+<footer>
+    &copy; 2023 Your Interior Design Hub
+</footer>
+
+</body>
+</html>

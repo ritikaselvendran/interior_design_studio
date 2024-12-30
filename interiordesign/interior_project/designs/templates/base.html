@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django Project{% endblock %}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://cdn.decoist.com/wp-content/uploads/2021/06/Two-story-black-house-witg-glass-walls-in-the-middle-of-the-forest-19247.jpg') center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: transparent; /* Set the background of the header to transparent */
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #fff; /* Set the text color to white */
+        }
+
+        .floating-box {
+            background-color: rgba(255, 255, 255, 0.8); /* Set white color with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Align text to the left */
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: black; /* Black background */
+            color: white; /* White text */
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #333; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>{% block header %}  {% endblock %}</h1>
+    </header>
+
+    <main>
+        <div class="floating-box">
+            {% block content %} {% endblock %}
+        </div>
+    </main>
+
+</body>
+</html>

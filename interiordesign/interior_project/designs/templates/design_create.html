@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0; /* Set your desired background color */
+    }
+
+    .create-box {
+        position: relative;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 400px; /* Set the maximum width of the box */
+        width: 100%;
+        box-sizing: border-box;
+        background: url('https://img.freepik.com/free-photo/blue-armchair-against-blue-wall-living-room-interior-elegant-interior-design-with-copy-space-ai-generative_123827-23720.jpg') center center fixed;
+        background-size: cover;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        position: relative; /* Ensure z-index works */
+        z-index: 1; /* Ensure the text is above the background */
+    }
+
+    form {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    button {
+        background-color: #4CAF50; /* Green */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    a {
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="create-box">
+    <h2>Create a New Design</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Design</button>
+    </form>
+    <br>
+    <a href="{% url 'design_list' %}">Back to Design List</a>
+</div>
+{% endblock %}
